@@ -3,10 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My game site</title>
+    <title>базовый JS</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <h1>Добро пожаловать на мой сайт !</h1>
+<body class="">
+    <header class="header center">
+        <h1 class="header__heading">Добро пожаловать на мой сайт !</h1>
+        <div class="header__subheading-box"><p class="header__subheading">Вам предстоит пройти несколько увлекательных игр. Если готов нажимай </p><p class="header__subheading--bold">поехали</p><p class="header__subheading"> и </p><p class="header__subheading--bold">приступай</p></p></div>
+        <button class="header__button">Поехали</button>
+    </header>
+    <section class="game-box center grid">
+        <div class="game game-1"><p class="game__title">Игра 1</p></div>
+        <div class="game game-2"><p class="game__title">Игра 2</p></div>
+        <div class="game game-3"><p class="game__title">Игра 3</p></div>
+    </section>
 </body>
 </html>
