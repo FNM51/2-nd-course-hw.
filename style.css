@@ -93,6 +93,7 @@
     height: 300px;
     flex-shrink: 0;
     grid-column: span 4;
+    text-decoration: none;
 }
 
 .game:hover{
