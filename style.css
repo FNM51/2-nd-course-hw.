@@ -9,12 +9,6 @@
     padding-right: calc(50% - 601px);
 }
 
-.grid{
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 32px;
-}
-
 /*Header*/
 .header{
     padding-top: 217px;
@@ -87,17 +81,21 @@
     padding-bottom: 128px;
     flex-shrink: 0;
     background: #000915;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
 }
 
 .game{
     height: 300px;
+    width: 379px;
     flex-shrink: 0;
-    grid-column: span 4;
     text-decoration: none;
 }
 
 .game:hover{
-    border: 3px solid #44D2FF;
+    outline: 3px solid #44D2FF;
 }
 
 .game-1{
@@ -135,3 +133,39 @@
 /*Section (memory)*/
 
 /*Section (mystery)*/
+
+/*Mobil*/
+@media (max-width: 575px) {
+    .header{
+        padding-top: 239px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header__heading{
+        font-size: 32px;
+        min-width: 343px;
+        text-align: center;
+    }
+
+    .header__subheading-box{
+        min-width: 343px;
+        padding-bottom: 37px;
+        text-align: center;
+    }
+    
+    .header__subheading{
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .header__subheading--bold{
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .game{
+        width: 343px;
+    }
+}
