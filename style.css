@@ -186,6 +186,7 @@
 @media (max-width: 575px) {
     .header{
         padding-top: 239px;
+        height: 735px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -219,6 +220,10 @@
 
     .seasons{
         align-items: center;
+    }
+
+    .seasons-box{
+        height: 654px;
     }
 
     .seasons__title{
