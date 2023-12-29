@@ -235,6 +235,7 @@
 
 /*Mobil*/
 @media (max-width: 575px) {
+    /*Header*/
     .header{
         padding-top: 239px;
         height: 735px;
@@ -320,5 +321,5 @@
     }
 
     /*Section (mystery)*/
-  
+    
 }
