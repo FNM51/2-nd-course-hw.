@@ -178,12 +178,64 @@
     height: 333px;
     flex-shrink: 0;
 }
+
 /*Section (memory)*/
+.memory-box{
+    height: 800px;
+    flex-shrink: 0;
+    background: #000915;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+}
+.memory{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.memory__title{
+    /*Typography*/
+    color: #FFF;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.memory__text{
+    max-width: 584px;
+    /*Typography*/
+    color: #FFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 32px; /* 177.778% */
+}
+.memory__button{
+    width: 234.063px;
+    height: 48.603px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    background: #9C0332;
+    /*Typography*/
+    color: #FFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.memory__img{
+    width: 485px;
+    height: 333px;
+    flex-shrink: 0;
+}
 
 /*Section (mystery)*/
 
 /*Mobil*/
 @media (max-width: 575px) {
+    /*Header*/
     .header{
         padding-top: 239px;
         height: 735px;
@@ -213,11 +265,13 @@
         font-size: 14px;
         line-height: 22px;
     }
-
+    
+    /*Section (game)*/
     .game{
         width: 343px;
     }
 
+    /*Section (seasons)*/
     .seasons{
         align-items: center;
     }
@@ -240,4 +294,32 @@
         width: 344px;
         height: 236px;
     }
+
+    /*Section (memory)*/
+    .memory{
+        align-items: center;
+    }
+
+    .memory-box{
+        height: 654px;
+        flex-direction: row;
+    }
+
+    .memory__title{
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .memory__text{
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .memory__img{
+        width: 344px;
+        height: 236px;
+    }
+
+    /*Section (mystery)*/
+    
 }
