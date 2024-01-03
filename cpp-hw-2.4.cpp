@@ -1,3 +1,5 @@
+//Это для себя
+
 #include <iostream>
 #include <string>
 #include <map>
