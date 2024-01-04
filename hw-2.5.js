@@ -1,4 +1,5 @@
-//Task #1
+/*
+/Task #1
 function findLess(number1, number2) {
     if (number1 === number2) {
         return number1;        
@@ -63,3 +64,40 @@ function multiTwoNumbers(number1, number2) {
 let number1 = prompt("Введи первое число");
 let number2 = prompt("Введи второе число");
 multiTwoNumbers(number1, number2);
+
+//Task #6
+function cube() {
+    let userNumber = prompt("Напиши число")
+    if (isNaN(userNumber)) {
+        alert('Переданный параметр не является числом')
+    } else {
+        alert(`${userNumber} в кубе равняется ${Number(userNumber) ** 2}`)
+    }
+};
+cube(); 
+
+*/
+
+//Task #7
+const circle1 = {
+    radius : 12,
+    getArea() {
+        console.log(this.radius * Math.PI ** 2);
+    },
+    getPerimeter() {
+        console.log(this.radius * Math.PI * 2);
+    }
+}
+const circle2 = {
+    radius : 16,
+    getArea() {
+        console.log(this.radius * Math.PI ** 2);
+    },
+    getPerimeter() {
+        console.log(this.radius * Math.PI * 2);
+    }
+}
+circle1.getArea();
+circle1.getPerimeter();
+circle2.getArea();
+circle2.getPerimeter();
