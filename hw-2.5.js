@@ -75,7 +75,7 @@ function cube() {
 };
 cube(); 
 
-//Task #8
+//Task #7
 const circle1 = {
     radius : 12,
     getArea() {
