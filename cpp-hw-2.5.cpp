@@ -2,6 +2,7 @@
 #include <string>
 #include <map>
 #include <math.h>
+#include <unistd.h>
 
 using namespace std;
 
@@ -67,6 +68,7 @@ void cube() {
   string userNumber;
   cout << "Введи число: ";
   getline(cin, userNumber);
+  sleep(3);
   if (typeInt(userNumber)){
     int result = pow(stoi(userNumber), 2);
     cout << result << endl;
@@ -98,12 +100,14 @@ int main() {
   //Task #4
   checkUserAge();
   //Task #5
-  string number3;
-  string number4;
   cout << "Введи первое число: ";
+  string number3;
   getline(cin, number3);
+  sleep(3);
   cout << "Введи второе число: ";
+  string number4;
   getline(cin, number4);
+  sleep(3);
   multiTwoNumbers(number3, number4);
   //Task #6
   cube();
