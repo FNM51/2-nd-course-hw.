@@ -5,6 +5,15 @@
 
 using namespace std;
 
+bool typeInt(string userInput) {
+  try {
+    stoi(userInput);
+    return true;
+  } catch (const invalid_argument& e) {
+    return false;
+  }
+};
+
 //Task #1
 void findLess(int number1, int number2){
   if (number1 == number2) {
@@ -45,9 +54,9 @@ void checkUserAge() {
   };
 }
 //Task #5
-void multiTwoNumbers(int number3, int number4) {
-  if (typeid(number3) == typeid(int) && typeid(number4) == typeid(int)){
-    int result = number3 * number4;
+void multiTwoNumbers(string number3, string number4) {
+  if (typeInt(number3) && typeInt(number4)){
+    int result = stoi(number3) * stoi(number4);
     cout << result << endl;
   } else {
     cout << "Одно или оба значения не являются числом" << endl;
@@ -55,14 +64,14 @@ void multiTwoNumbers(int number3, int number4) {
 }
 //Task #6
 void cube() {
-  int userNumber;
+  string userNumber;
   cout << "Введи число: ";
-  cin >> userNumber;
-  if (typeid(userNumber) == typeid(int)){
-    int result = pow(userNumber, 2);
+  getline(cin, userNumber);
+  if (typeInt(userNumber)){
+    int result = pow(stoi(userNumber), 2);
     cout << result << endl;
   } else {
-    cout << "Одно или оба значения не являются числом" << endl;
+    cout << "Переданный параметр не является числом" << endl;
   }
 }
 //Task #7
@@ -89,12 +98,12 @@ int main() {
   //Task #4
   checkUserAge();
   //Task #5
-  int number3;
-  int number4;
+  string number3;
+  string number4;
   cout << "Введи первое число: ";
-  cin >> number3;
+  getline(cin, number3);
   cout << "Введи второе число: ";
-  cin >> number4;
+  getline(cin, number4);
   multiTwoNumbers(number3, number4);
   //Task #6
   cube();
