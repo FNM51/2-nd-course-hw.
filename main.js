@@ -42,3 +42,30 @@ switch (mounthNumber) {
         break;
 }
 }
+
+function memory() {
+    const words = ['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин'];
+    words.sort(() => Math.random() - 0.5);
+    let wordsInStringForAlert = words.join(', ')
+    alert(wordsInStringForAlert);
+    let firstWord = words.shift();
+    let secondWord = words.pop();
+    let regexp = /^[а-яА-Я]*$/;
+    let firstWordUser = prompt('Какое было первое слово?');
+    if (regexp.test(firstWordUser)) {
+        let secondWordUser = prompt('Какое было второе слово?');
+        if (regexp.test(secondWordUser)) {
+            if (firstWord.toLowerCase() === firstWordUser.toLowerCase() && secondWord.toLowerCase() === secondWordUser.toLowerCase()) {
+                alert('Поздравляю! У вас феноменальная память! Вы победили! 😆');
+            } else if (firstWord.toLowerCase() === firstWordUser.toLowerCase() || secondWord.toLowerCase() === secondWordUser.toLowerCase()) {
+                alert('Вы были близки к победе! 😉');
+            } else {
+                alert('К сожалению вы проиграли 😭');
+            }
+        } else {
+            alert('Вы ввели что-то не то 😕');
+        }
+    } else {
+        alert('Вы ввели что-то не то 😕');
+    }   
+}
