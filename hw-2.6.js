@@ -23,7 +23,11 @@ function task4(){
     console.log('Task-4');
     const array = [];
     for (let i = 0; i < 3; i++) {
-        array.push([1, 1, 1]);
+        let arrayInArray = [];
+        for (let i = 0; i < 3; i++) {
+            arrayInArray.push(1);
+        };
+        array.push(arrayInArray);
     };
     console.log(array)
 }
@@ -69,8 +73,11 @@ function task9() {
 function task10() {
     console.log('Task-10');
     const numbers = [4, 8, 5, 3, 7, 6, 2, 10, 9, 1]
-    const result = numbers.reduce((a,b) =>  numbers.reduce((a, b) => a + b));
-    console.log(result)
+    let result = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        result = numbers[i] + numbers[i + 1];
+        console.log(result);
+    }
 }
 
 //Task 11
