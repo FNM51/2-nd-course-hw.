@@ -2,10 +2,8 @@ function task1(){
     console.log('Task-1');
     const numbers = [1, 5, 4, 10, 0, 3];
     for (let i = 0; i < numbers.length; i++) {
-        if (numbers[i] == 10){
-            console.log(numbers[i]); 
-            break;}
         console.log(numbers[i]);
+        if (numbers[i] == 10){break;}
     }
 }
 
@@ -23,11 +21,14 @@ function task3(){
 
 function task4(){
     console.log('Task-4');
-    const array = [
-        [1, 1, 1], 
-        [1, 1, 1], 
-        [1, 1, 1]
-    ]
+    const array = [];
+    for (let i = 0; i < 3; i++) {
+        let arrayInArray = [];
+        for (let i = 0; i < 3; i++) {
+            arrayInArray.push(1);
+        };
+        array.push(arrayInArray);
+    };
     console.log(array)
 }
 
@@ -65,27 +66,23 @@ function task9() {
     console.log('Task-9');
     let array = [[1, 2, 3,],[4, 5, 6]];
     let assistantArray = array.join();
-    array = assistantArray.split(',')
-    console.log(array);
+    array = assistantArray.split(',');
+    console.log(array.map(el => Number(el)));
 }
 
 function task10() {
     console.log('Task-10');
     const numbers = [4, 8, 5, 3, 7, 6, 2, 10, 9, 1]
-    numbers.forEach(i => {
-        console.log(i)
-        const result = numbers.reduce((a, b) => a + b)
-        console.log(result)
-    });
+    let result = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        result = numbers[i] + numbers[i + 1];
+        console.log(result);
+    }
 }
 
 //Task 11
 function squareOfNumbers(array) {
-    const result = [];
-    array.forEach(element => {
-        element = element ** 2;
-        result.push(element)
-    });
+    const result = array.map(element => element ** 2);
     return result;
 }
 function task11() {
@@ -110,11 +107,8 @@ function task12() {
 
 //Task 13
 function filterPositive(array) {
-    const negative = [];
-    array.forEach(element => {
-        if (element < 0){negative.push(element)}
-    });
-    return negative;
+    const result = array.filter(element => element < 0);
+    return result;
 }
 function task13() {
     console.log('Task-13');
@@ -137,7 +131,7 @@ function task15() {
     console.log('Task-15');
     const numbers = [];
     for (let i = 1; i <= 6; i++) {
-        numbers.push(Math.ceil(Math.random() * 10 + 1));     
+        numbers.push(Math.ceil(Math.random() * 9 + 1));     
     };
     let result = numbers.reduce((a,b) => a + b );
     result = result / 2;
