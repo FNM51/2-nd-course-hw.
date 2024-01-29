@@ -74,7 +74,7 @@ function task10() {
     console.log('Task-10');
     const numbers = [4, 8, 5, 3, 7, 6, 2, 10, 9, 1]
     let result = 0;
-    for (let i = 0; i < numbers.length; i++) {
+    for (let i = 0; i < numbers.length - 1; i++) {
         result = numbers[i] + numbers[i + 1];
         console.log(result);
     }
