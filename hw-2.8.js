@@ -17,7 +17,7 @@ function task1(){
     return number > 0;
   }
   function isMale(element) {
-    if (element.gender == 'male') {
+    if (element.gender === 'male') {
       return element;
     }
   }
@@ -46,9 +46,8 @@ function task1(){
   //Task-3
   function task3() {
     const timer = (seconds) => {
-      let myDate = new Date();
       const interval = setInterval(() => {
-          console.log(myDate);
+          console.log(new Date());
       }, 3000);
   
       setTimeout(() => {
@@ -65,7 +64,6 @@ function task1(){
   function task4(){
     function delayForSecond(callback) {
       setTimeout(callback, 1000)
-      callback();
     }
   
     delayForSecond(function () {
